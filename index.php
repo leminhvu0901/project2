@@ -10,7 +10,7 @@ $data = [
     "student" => "Lê Minh Vũ",
     "time" => date("Y-m-d H:i:s")
 ];
-
+echo "heheh";
 // Trả dữ liệu về
 echo json_encode($data);
 ?>
