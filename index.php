@@ -1,3 +1,3 @@
 <?php
-echo"php dom dom yes yes huhuhuhuhu "
+echo"php dom dom yes yes hih "
 ?>
