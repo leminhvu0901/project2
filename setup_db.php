@@ -1,14 +1,17 @@
 <?php
 // 1. Kết nối Database
-$servername = getenv('DB_HOST');
-$username = getenv('DB_USER');
-$password = getenv('DB_PASS');
-$dbname = getenv('DB_NAME');
+$servername = "mysql.railway.internal"; // Lấy từ MYSQLHOST
+$username = "root";                     // Lấy từ MYSQLUSER
+$password = "kADaCjUQQvksZipvQJleOwzneJYrmjFy"; // Mật khẩu dài ngoằng của bạn
+$dbname = "railway";                    // Lấy từ MYSQLDATABASE
 $port = 3306;
 
+// Tạo kết nối
 $conn = new mysqli($servername, $username, $password, $dbname, $port);
+
+// Kiểm tra kết nối
 if ($conn->connect_error) {
-    die("Kết nối thất bại: " . $conn->connect_error);
+    die("❌ Chết rồi: " . $conn->connect_error);
 }
 
 // 2. Tạo bảng sản phẩm (Nếu chưa có)
