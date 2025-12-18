@@ -8,19 +8,18 @@
 <body>
      <h1> Bai Kiem tra-DH52201771_ca2</h1>
 
-
     <h1>Danh sách sản phẩm từ Railway</h1>
     <ul id="list">Đang tải dữ liệu...</ul>
 
     <script>
-        // Gọi API từ Backend
-        fetch('/get_products.php') // Dùng đường dẫn tương đối cho gọn
+
+        fetch('/get_products.php') 
             .then(response => response.json())
             .then(data => {
                 const list = document.getElementById("list");
-                list.innerHTML = ""; // Xóa chữ "Đang tải..."
+                list.innerHTML = ""; 
                 
-                // Duyệt qua từng sản phẩm và hiện lên màn hình
+ 
                 data.forEach(product => {
                     const li = document.createElement("li");
                     li.innerHTML = `<strong>${product.name}</strong> - ${parseInt(product.price).toLocaleString()} VNĐ`;
